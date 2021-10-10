@@ -30,25 +30,25 @@
   </tr>
   <tr height="">
     <td align="center" width="120px">
-      <a href="https://github.com/ed-kyu">seungkyu</a>
+      <a href="https://github.com/ed-kyu">승규</a>
     </td>
     <td align="center" width="120px">
-      <a href="https://github.com/YoonBaek/">yoonbaek</a>
+      <a href="https://github.com/YoonBaek/">승윤</a>
     </td>
     <td align="center" width="120px">
-      <a href="https://github.com/seokzin/">seokzin</a>
+      <a href="https://github.com/seokzin/">석진</a>
     </td>
     <td align="center" width="120px">
-      <a href="https://github.com/Julia-we-s2">yeonju</a>
+      <a href="https://github.com/Julia-we-s2">연주</a>
     </td>
     <td align="center" width="120px">
-      <a href="https://github.com/j2woong1">jiwoong</a>
+      <a href="https://github.com/j2woong1">지웅</a>
     </td>
     <td align="center" width="120px">
-      <a href="https://github.com/devpla/">yeonhee</a>
+      <a href="https://github.com/devpla/">연희</a>
     </td>
     <td align="center" width="120px">
-      <a href="https://github.com/chaselover/">seungjoo</a>
+      <a href="https://github.com/chaselover/">승주</a>
     </td>
   </tr>
 </table>
