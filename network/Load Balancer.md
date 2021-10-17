@@ -95,3 +95,4 @@
 
 - Health Check : 초당 몇 회 요청, 응답을 반복해 기능이 살아있나 확인함.
 - Main Load Balancer가 동작하지 않으면 가상IP(VIP, Virtual IP)는 여분의 Load Balancer로 변경
+
