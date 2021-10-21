@@ -2,10 +2,6 @@
 
 ### **State transition diagram**
 
-
-
-![2](C:\Users\ksk\Desktop\새 폴더 (5)\2.svg)
-
 - new: 프로세스가 만들어짐
 
 - ready: 메모리에 올라옴, 수행가능한 상태, 최근에는 메모리가 충분히 크기 때문에 메모리에 로딩되지 않는 것이 없다고 한다. (즉, new와 ready가 합쳐져있다고 볼 수 있다.)
