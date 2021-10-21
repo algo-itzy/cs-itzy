@@ -1,3 +1,5 @@
+# Memory management
+
 ## Swapping
 
 ![image](https://user-images.githubusercontent.com/43740455/138339332-791b3124-1c01-4352-8967-0ac13c635974.png)
@@ -10,6 +12,7 @@
 ### 외부 단편화
 
 - 반복된 프로세스 작업으로 인해 물리 메모리 곳곳에 잉여 공간이 생기는 현상
+
 ![image](https://user-images.githubusercontent.com/43740455/138339346-30f00ec1-cda2-420b-9c11-6d9913f0d728.png)
 
 ### 내부 단편화
