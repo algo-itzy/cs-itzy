@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div class="keys">
+    <div data-key="65" class="key"> <!-- A: 65, ... S: 83 -->
+      <kbd>A</kbd> <!-- kbd: 키보드 -->
+      <span class="sound">clap</span>
+    </div>
+    <div data-key="83" class="key">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div data-key="68" class="key">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="70" class="key">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+    <div data-key="71" class="key">
+      <kbd>G</kbd>
+      <span class="sound">boom</span>
+    </div>
+    <div data-key="72" class="key">
+      <kbd>H</kbd>
+      <span class="sound">ride</span>
+    </div>
+    <div data-key="74" class="key">
+      <kbd>J</kbd>
+      <span class="sound">snare</span>
+    </div>
+    <div data-key="75" class="key">
+      <kbd>K</kbd>
+      <span class="sound">tom</span>
+    </div>
+    <div data-key="76" class="key">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+    </div>
+  </div>
+  <!-- data-key -->
+  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="83" src="sounds/hihat.wav"></audio>
+  <audio data-key="68" src="sounds/kick.wav"></audio>
+  <audio data-key="70" src="sounds/openhat.wav"></audio>
+  <audio data-key="71" src="sounds/boom.wav"></audio>
+  <audio data-key="72" src="sounds/ride.wav"></audio>
+  <audio data-key="74" src="sounds/snare.wav"></audio>
+  <audio data-key="75" src="sounds/tom.wav"></audio>
+  <audio data-key="76" src="sounds/tink.wav"></audio>
+
+<script>
+  // 함수 선언 -> function ABCD(event) {}, 
+
+  function playSound(event) {
+    // document.querySelector => 브라우저 화면에서 키나 value를 통해 html 요소 1개 가져옴
+    // audio[data-key="65"] key, value로 찾을 수도 있음. "" 있어야 함
+    // es6 template string : ${e.keyCode}
+    const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+    const key = document.querySelector(`div[data-key="${event.keyCode}"]`);
+    console.log(audio)
+    console.log(key)
+    // audio 중에 맞는 키 없을 때 (null)일 때 함수 끝냄
+    if (!audio) return;
+
+    // css에 있는 속성 값 추가기능 => like animation 효과
+    key.classList.add('playing');
+    // 여러번 눌러도 1번만 재생되는 문제 => rewind해버림
+    audio.currentTime = 0;
+
+    audio.play(); // 원래는 audio길이만큼 재생될 때까지 다시 시작 안됨
+  }
+
+  function removeTransition(event) {
+    // transform 안한 것들은 무시
+    if (event.propertyName !== 'transform') return;
+    // this ???????
+    // this.classList.remove('playing'); => 
+    event.target.classList.remove('playing');
+  }
+
+
+  // transition end event : 위에서 추가한 속성값 제거 위해 만듬
+  // querySelector All 모든 html 요소 가져옴
+  const keys = Array.from(document.querySelectorAll('.key'));
+  // keys.addEventListener라고 하면 작동 안함.
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+  // 화면에서 어떤 동작 발생했는지 체크, 여기서는 키보드 입력관련 후에 뒤에 함수 실행
+  window.addEventListener('keydown', playSound); 
+</script>
+
+
+</body>
+</html>
+
+<!-- es6, jquery ? -->
