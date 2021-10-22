@@ -14,11 +14,11 @@
       font-size: 20px;
       font-weight: 200;
     }
-    
+
     body {
       margin: 0;
     }
-    
+
     *, *:before, *:after {
       box-sizing: inherit;
     }
@@ -26,6 +26,7 @@
     .panels {
       min-height: 100vh;
       overflow: hidden;
+      display: flex;
     }
 
     .panel {
@@ -36,13 +37,20 @@
       align-items: center;
       /* Safari transitionend event.propertyName === flex */
       /* Chrome + FF transitionend event.propertyName === flex-grow */
+      /* --------------------------------------------------------------------- */
+      /* cubic-bezier : 4가지 숫자로 베지어 곡선을 정의하여, 곡선의 커브를 만듦. tranzition 제어  */
       transition:
         font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
         flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
         background 0.2s;
+      /* --------------------------------------------------------------------- */
       font-size: 20px;
       background-size: cover;
       background-position: center;
+      flex: 1;  /* evenly distribute */
+      display: flex;  /*  */
+      justify-content : center;
+      flex-direction: column;
     }
 
     .panel1 { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
@@ -51,12 +59,41 @@
     .panel4 { background-image:url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); }
     .panel5 { background-image:url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
 
-    /* Flex Children */
+    /* Flex Items */
     .panel > * {
       margin: 0;
       width: 100%;
       transition: transform 0.5s;
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+
+    /* --------------------------------------------------------------------- */
+    /* 첫 번째 단어와 마지막 단어의 속성 정의 */
+
+    /* 첫 번째 단어(자식)은 위로 사라져있게 해두고 */
+    .panel > *:first-child {
+      transform: translateY(-100%);
+    }
+
+    /* 원위치로 돌아오게 한다 : 화면 등장 효과 */
+    .panel.open-active > *:first-child {
+      transform: translateY(0);
+    }
+
+    /* 마지막 자식은 아래로 사라져있게 해두고 */
+    .panel > *:last-child {
+      transform: translateY(100%);
+    }
+
+    /* 원위치로 돌아오게 한다 : 화면 등장 효과 */
+    .panel.open-active > *:last-child {
+      transform: translateY(0);
+    }
+
+    /* --------------------------------------------------------------------- */
 
     .panel p {
       text-transform: uppercase;
@@ -69,9 +106,13 @@
       font-size: 4em;
     }
 
+    /* --------------------------------------------------------------------- */
+    /* 모든 flex: 1인 상태에서 .open 클래스를 부여받으면 해당 패널은 5배의 비율로 늘어난다. */
     .panel.open {
+      flex: 5;
       font-size: 40px;
     }
+    /* --------------------------------------------------------------------- */
 
   </style>
 
@@ -105,6 +146,23 @@
   </div>
 
   <script>
+    // 클래스명이 panel인 엘리먼트를 선택해 panels 상수에 정의
+    const panels = document.querySelectorAll('.panel');
+
+    function toggleOpen() {
+      // 클래스명에 open을 토글로 추가
+      this.classList.toggle('open');
+    }
+
+    function toggleActive(e) {
+      if (e.propertyName.includes('flex')) {
+        this.classList.toggle('open-active');
+      }
+    }
+
+    // panel인 앨리먼트들이 클릭됐을 때 토글 기능 작동하는 함수 실행
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    // panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 
   </script>
 
