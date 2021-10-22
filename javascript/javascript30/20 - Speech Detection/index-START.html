@@ -10,7 +10,34 @@
   </div>
 
 <script>
-  window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;  // 브라우저에서 호출
+
+  const recognition = new SpeechRecognition(); // 생성자 
+  recognition.interimResults = true; // 음성 인식 결과 반환
+  recognition.lang = 'ko-kr'; // 언어 설정
+  
+  let p = document.createElement('p');  // HTML p 요소 만들기
+  const words = document.querySelector('.words');  // 브라우저 표시 요소 지정
+  words.appendChild(p);  // 자식 요소로 삽입
+
+  recognition.addEventListener('result', e => {
+    const transcript = Array.from(e.results)  // 텍스트 연결
+      .map(result => result[0])
+      .map(result => result.transcript)
+      .join('');
+
+      const poopScript = transcript.replace(/poop|poo|shit|dump/gi, '💩');  // 해당 문자열을 포함하면 해당 이모지으로 변환
+      p.textContent = poopScript;
+
+      if (e.results[0].isFinal) {  // 인식 끝났으면
+        p = document.createElement('p');  // p 태그 생성
+        words.appendChild(p);
+      }
+  });
+
+  recognition.addEventListener('end', recognition.start);
+
+  recognition.start();
 
 
 </script>
