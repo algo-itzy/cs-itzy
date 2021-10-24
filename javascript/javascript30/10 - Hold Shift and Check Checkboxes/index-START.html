@@ -96,6 +96,55 @@
   </div>
 
 <script>
+  // SHIFT 기능 구현만 하면 된다.
+
+  // querySelectorAll, input[type="0000"]
+  const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+
+  let lastChecked; // let: 변수 재선언이 되지 않는다.
+
+  function handleCheck(e) {
+    //console.log(e)
+    console.log(e)
+    let inBetween = false; // 클릭하면 false로 바뀜
+    // shift키 눌렀는지 + 이미 한 개 눌러져 있을 때
+    // shiftk(대문자로 써야함)ey => shiftKey
+    if(e.shiftKey && e.target.checked && lastChecked.checked !== false) {
+      // FOR LOOP
+      checkboxes.forEach(checkbox => {
+        // 처음, 끝 부분 박스들만 inBetween = true <-> false
+        if(checkbox === e.target || checkbox === lastChecked) {
+          inBetween = !inBetween;
+          console.log('shift & checked');
+        }
+        // 시작점에서 inBetween true로 바꾸면 그 사이 값들은 if 문 실행
+        // 끝 지점 만나면 inBetween false되므로 if문 더이상 실행 X
+        if(inBetween){
+          checkbox.checked = true; // True라고 적으면 안됨..
+        }
+      });
+    }
+
+    // Shift & Uncheck
+    else if(e.shiftKey && e.target.checked === false && lastChecked.checked === false) {
+      // FOR LOOP
+      checkboxes.forEach(checkbox => {
+        // 처음, 끝 부분은 포함하지 않고, 처음 초과, 끝 미만 박스들만 inBetween = True
+        if(checkbox === e.target || checkbox === lastChecked) {
+          inBetween = !inBetween;
+          console.log('shift & unchecked');
+        }
+        if(inBetween){
+          checkbox.checked = false;
+        }
+      });
+    }
+
+    lastChecked = e.target;
+  }
+
+  checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+
 </script>
 </body>
 </html>
