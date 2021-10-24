@@ -9,6 +9,7 @@
 
   <div class="controls">
     <label for="spacing">Spacing:</label>
+    <!-- HTML 데이터 속성 : 추가 정보를 element에 담아 놓는 방법. 태그 안에 data- 로 시작해 이름을 붙인다.  -->
     <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
 
     <label for="blur">Blur:</label>
@@ -21,6 +22,25 @@
   <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
   <style>
+    /* ---------------------------------------------------------------- */
+    /* css 변수 */
+    :root {
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+    }
+
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
+
+    .hl {
+      color: var(--base);
+    }
+
+    /* ---------------------------------------------------------------- */
 
     /*
       misc styles, nothing to do with CSS variables
@@ -45,6 +65,18 @@
   </style>
 
   <script>
+    const inputs = document.querySelectorAll('.controls input');  // NodeList(3) [input#spacing, input#blur, input#base]
+
+    function handleUpdate() {
+      console.log(this.value)
+      const suffix = this.dataset.sizing || '';  // 마우스가 움직이거나 값이 변경된 앨리먼트의 데이터 속성값이 sizing인 값이 존재한다면 리턴, 없다면 빈 문자열 ''을 리턴
+      // 동적으로 css 변수 제어
+      // documentElement는 html 태그에 대한 읽기 속성. 변수를 html 태그에 style 요소로 설정
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));  // 값이 변경될 때
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));  // 마우스가 해당 앨리먼트 위를 움직일 때
   </script>
 
 </body>
