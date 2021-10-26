@@ -21,7 +21,12 @@ function getVideo() {
 let pixels = ctx.getImageData(0, 0, width, height);
 ```
 
-## Fliter - Red Effect
+![image](https://user-images.githubusercontent.com/43740455/138905858-60ed159b-4e0a-4d22-9d66-77aa73b42aaa.png)
+
+
+### Fliter - Red Effect
+
+![image](https://user-images.githubusercontent.com/43740455/138905940-99a2205b-8590-4efc-a181-f8b487b62abb.png)
 
 ```jsx
 function redEffect(pixels) {
@@ -34,7 +39,10 @@ function redEffect(pixels) {
 }
 ```
 
-## Filter - RGB Split
+### Filter - RGB Split
+
+![image](https://user-images.githubusercontent.com/43740455/138905975-0293fba0-9cdd-4e1f-8474-b4ed0e6bcf45.png)
+
 
 ```jsx
 function rgbSplit(pixels) {
@@ -47,7 +55,11 @@ function rgbSplit(pixels) {
 }
 ```
 
+
+
 ### Filter - Afterimage
+
+![image](https://user-images.githubusercontent.com/43740455/138906115-20091c39-beab-4f6f-880c-4fbe2b145fd0.png)
 
 ```jsx
 function paintToCanvas() {
