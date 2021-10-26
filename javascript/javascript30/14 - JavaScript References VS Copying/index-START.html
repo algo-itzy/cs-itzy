@@ -1,56 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>JS Reference VS Copy</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Reference VS Copy</title>
+  </head>
+  <body>
+    <script>
+      // int - 복제 가능 (Call by Value)
+      let age = 100;
+      let age2 = age;
+      console.log(age, age2); // 100, 100
+      age = 200;
+      console.log(age, age2); // 100, 100
 
-  <script>
-    // start with strings, numbers and booleans
+      // str - 복제 가능 (Call by Value)
+      let name = "Wes";
+      let name2 = name;
+      console.log(name, name2); // Wes Wes
+      name = "wesley";
+      console.log(name, name2); // wesley Wes
 
-    // Let's say we have an array
-    const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+      // array - 복제 불가 (Call by Ref)
+      const players = ["Wes", "Sarah", "Ryan", "Poppy"];
+      const team = players;
 
-    // and we want to make a copy of it.
+      console.log(players, team);
+      team[3] = "Lux"; // 두 배열 모두 바뀐다.
 
-    // You might think we can just do something like this:
+      // -------------------------------------------
+      // ------------SOLUTION (Array)---------------
+      // -------------------------------------------
 
-    // however what happens when we update that array?
+      // 1. slice()
+      const team2 = players.slice(); // default - (start, end)
 
-    // now here is the problem!
+      // 2. concat - 배열 2개를 합쳐 새 배열 만듬
+      const team3 = [].concat(players);
 
-    // oh no - we have edited the original array too!
+      // 3. Spread - iterable한 값들을 모두 가져온다.
+      const team4 = [...players];
+      team4[3] = "heeee hawww";
+      console.log(team4);
 
-    // Why? It's because that is an array reference, not an array copy. They both point to the same array!
+      // 4. from() - 배열 얕은 복사
+      const team5 = Array.from(players);
 
-    // So, how do we fix this? We take a copy instead!
+      // -------------------------------------------
+      // ------------SOLUTION (Object)--------------
+      // -------------------------------------------
 
-    // one way
+      const person = {
+        name: "Wes Bos",
+        age: 80,
+      };
 
-    // or create a new array and concat the old one in
+      // 1. assign() - 객체 얕은 복사
+      const cap2 = Object.assign({}, person, { number: 99, age: 12 });
+      console.log(cap2);
 
-    // or use the new ES6 Spread
+      // 2. Spread
+      const cap3 = { ...person };
 
-    // now when we update it, the original one isn't changed
+      // -------------------------------------------
+      // ------------SOLUTION (Nested Object)-------
+      // -------------------------------------------
 
-    // The same thing goes for objects, let's say we have a person object
+      const wes = {
+        name: "Wes",
+        age: 100,
+        social: {
+          twitter: "@wesbos",
+          facebook: "wesbos.developer",
+        },
+      };
 
-    // with Objects
-    const person = {
-      name: 'Wes Bos',
-      age: 80
-    };
-
-    // and think we make a copy:
-
-    // how do we take a copy instead?
-
-    // We will hopefully soon see the object ...spread
-
-    // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
-
-  </script>
-
-</body>
+      // 3. JSON stringify & parse
+      const dev2 = JSON.parse(JSON.stringify(wes));
+    </script>
+  </body>
 </html>
