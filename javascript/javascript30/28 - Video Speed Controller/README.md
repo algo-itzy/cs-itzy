@@ -18,4 +18,4 @@ function handleMove(e) {
 
 [https://ko.javascript.info/size-and-scroll](https://ko.javascript.info/size-and-scroll)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d2bc022c-d2d5-4c35-a031-672ebb1cb68a/Untitled.png)
+![image](https://user-images.githubusercontent.com/43740455/139092400-bec438b1-5486-4dec-afd2-e5a5336c0153.png)
