@@ -67,7 +67,7 @@
 - 연속적으로 값을 저장하는 배열과 연계될때 유용
 - 포인터를 통해 연결 리스트 구현
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8b2fd7a0-5dbf-43ac-b748-3d839a3a661c/Untitled.png)
+![image](https://user-images.githubusercontent.com/43740455/139869757-74b53afa-7112-40f5-b915-4129e6d0ecad.png)
 
 <br />
 
