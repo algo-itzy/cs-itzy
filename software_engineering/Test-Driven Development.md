@@ -23,7 +23,7 @@ Kent Beck이라는 분이 Extreme Programming을 발표하며 2003년에 제안
 
 ### TDD 싸이클
 
-![cycle](TDD.assets/TDD_cycle.png)
+![cycle](TDD.assets/TDD_cycle.PNG)
 
 ### 도대체 어떻게 하는건데? 
 * Test code를 작성하고, Testable한 Product Code를 적용해 기능 단위로 독립적으로 테스트한다.
