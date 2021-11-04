@@ -126,9 +126,13 @@ node1.next = node2
 
 ## 연산
 - 삽입
+
+
 ![](https://i.imgur.com/x5hJJbl.png)
 
 - 삭제
+
+
 ![](https://i.imgur.com/TQuL0N0.png)
 
 <br/>
@@ -140,16 +144,22 @@ node1.next = node2
     - 단방향 연결됨 : 각 원소(노드)에 단방향 단일 링크(포인터) 필드 필요
     - 노드 링크는, 다음 노드를 가리킴
     - 마지막 노드의 링크는, NULL 값을 갖음
-    <br/>
+
+<br/>
+    
 - **이중 연결 리스트** (Doubly Linked Linear List)
     -  양방향 가능 : 후행 노드 및 선행 노드 모드를 가리킬 수 있도록 매 노드마다 2개의 링크(포인터)를 가짐
     -  즉, 순방향, 양방향 모두 탐색 가능
+
 ![](https://i.imgur.com/CmcMS0I.png)
 
-    <br/>
+<br/>
+
 - **원형 연결 리스트** (Circularly Linked Linear List) 
     - 마지막 노드의 링크가 리스트의 처음 노드를 가리킴
     - 즉, 단순 연결 리스트의 처음과 끝을 연결하면 원형 연결 리스트가 됨
+
+
 ![](https://i.imgur.com/Kusi74r.png)
 
 <br/>
