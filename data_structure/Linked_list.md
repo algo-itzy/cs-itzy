@@ -135,12 +135,16 @@ node1.next = node2
 - **이중 연결 리스트** (Doubly Linked Linear List)
     -  양방향 가능 : 후행 노드 및 선행 노드 모드를 가리킬 수 있도록 매 노드마다 2개의 링크(포인터)를 가짐
     -  즉, 순방향, 양방향 모두 탐색 가능
+
+
 ![](https://i.imgur.com/CmcMS0I.png)
 
     <br/>
 - **원형 연결 리스트** (Circularly Linked Linear List) 
     - 마지막 노드의 링크가 리스트의 처음 노드를 가리킴
     - 즉, 단순 연결 리스트의 처음과 끝을 연결하면 원형 연결 리스트가 됨
+
+
 ![](https://i.imgur.com/Kusi74r.png)
 
 <br/>
