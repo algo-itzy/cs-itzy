@@ -12,55 +12,23 @@
      * 파이썬의 배열은 주솟값을 저장한 주소.
      * 실제 원솟값의 주소를 저장하는게 아니라 몇 번째 원소인지 정도만 저장
      * 이중참조를 해야하기 때문에 속도가 느리다는 단점
+   * push / pop 모두 O(1)의 시간 복잡도
 
 ```c
-#include <iostream> using namespace std; 
-const int MAX_NUM = 100;
-typedef int element; 
-class Stack{ 
-    public: 
-    element data[MAX_NUM]; 
-    int top; //마지막 원소를 가리키는 인덱스 
-    Stack(){ 
-        top=-1; //초기화
-    } 
-    bool is_empty(){ 
-        //if(top == -1) return true; 
-        //else return false; 
-        return(top == -1); 
-    } bool is_full(){ 
-        //if (top == MAX_NUM-1) return true; 
-        //인덱스는 0~99까지니까 -1 해주어야 한다. 
-        //else return false; 
-        return (top == MAX_NUM-1); } 
-    void push(element value){ 
-        if(is_full()){ 
-            out << "STACK OVERFLOW!!!" << endl;
-            exit(-1); 
-        }
-        else{ 
-            //top++; //data[top] = value; 
-            data[++top] = value; 
-        } 
-    } 
-    element pop(){ 
-        if (is_empty()){ 
-            cout<<"STACK UNDERFLOW!!!"<<endl; 
-            exit(-1); 
-        } 
-        else{ 
-            //element x = data[top]; 
-            //top--; //return(x); 
-            return(data[top--]); 
-        } 
-    } 
-    element peek(){ 
-        if(is_empty()){
-            cout<< "STACK UNDERFLOW!!!" <<endl; 
-            exit(-1); } else{ return(data[top]); 
-         } 
-    }
-}; 
+void push(Stack s, Item i)
+{
+ if (is_full(s))
+ 	reallocate(s); // 이건 O(n)
+ s->top++;
+ s->contents[s->top] = i;
+}
+Item pop(Stack s)
+{
+ if (is_empty(s))
+ 	terminate("Error in pop: stack is empty.”);
+ s->top—-;
+ return s->contents[s->top+1];
+ }
 ```
 
 배열의 형태는 다른 마크다운 참조
@@ -69,39 +37,32 @@ class Stack{
 
 * 크기가 고정되어 있지 않음.
 * 연결리스트의 노드에 다음 노드의 메모리를 저장하는 방식으로 구현
+* push / pop 모두 O(1)의 시간 복잡도
 
 ```java
-public class MyStack {
-	private static class StackNode {
-    	private T data;
-        private StackNode next;
-        public StackNode(T data) {
-        	this.data = data
-    	}    
-   	}
-    
-    private StackNode top;
-    public T pop() {
-    	if (top == null) throw new EmptyStackException();
-        T item = top.data;
-        top = top.next;
-        return item;
-    }
-    
-    public void push(T item) {
-    	StackNode t = new StackNode(item);
-        t.next = top;
-        top = t;
-    }
-    
-    public T peek() {
-    	if(top == null) throw new EmptyStackException();
-        return top.data;
-    }
-    
-    public boolean isEmpty() {
-    	return top == null;
-    }
+void push(Stack s, Item i)
+{
+ struct node *new_node = malloc(sizeof(struct node));
+ if (new_node == NULL)
+ 	terminate("Error in push: stack is full.");
+
+ new_node->data = i;
+ new_node->next = s->top;
+ s->top = new_node;
+}
+Item pop(Stack s)
+{
+ struct node *old_top;
+ Item i;
+
+ if (is_empty(s))
+ 	terminate("Error in pop: stack is empty.");
+
+ old_top = s->top;
+ i = old_top->data;
+ s->top = old_top->next;
+ free(old_top);
+ return i;
 }
 ```
 
