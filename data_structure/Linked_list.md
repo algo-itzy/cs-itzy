@@ -53,7 +53,7 @@ Node *head = NULL;        // 첫 번째 노드의 주소를 저장할 포인터 
 
 
 4. **다른 자료구조**(추상 자료형, ADT: Abstract Data Type)**의 기반이 된다.**
-   - 큐, 스택, 해시 테이블, 트리 등
+   - 큐, 스택, 해시 테이블 등
 
 <br/>
 
@@ -124,6 +124,15 @@ node1.next = node2
 <br/>
 
 
+## 연산
+- 삽입
+![](https://i.imgur.com/x5hJJbl.png)
+
+- 삭제
+![](https://i.imgur.com/TQuL0N0.png)
+
+<br/>
+
 
 ## 연결 리스트의 구분
 - **단순 연결 리스트** (Singly Linked Linear List): 노드들을 한 줄로 연결시킨 자료 구조
@@ -135,16 +144,12 @@ node1.next = node2
 - **이중 연결 리스트** (Doubly Linked Linear List)
     -  양방향 가능 : 후행 노드 및 선행 노드 모드를 가리킬 수 있도록 매 노드마다 2개의 링크(포인터)를 가짐
     -  즉, 순방향, 양방향 모두 탐색 가능
-
-
 ![](https://i.imgur.com/CmcMS0I.png)
 
     <br/>
 - **원형 연결 리스트** (Circularly Linked Linear List) 
     - 마지막 노드의 링크가 리스트의 처음 노드를 가리킴
     - 즉, 단순 연결 리스트의 처음과 끝을 연결하면 원형 연결 리스트가 됨
-
-
 ![](https://i.imgur.com/Kusi74r.png)
 
 <br/>
