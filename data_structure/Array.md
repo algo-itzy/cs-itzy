@@ -76,21 +76,42 @@
 
 ## 문법
 
+- `*` : 포인터 수식어
+- `&` : 변수의 메모리 주소
+
 ```c
-char c = 'A';
-float f = 46.1;
-double d = 2.73
+#include <stdio.h>
 
-char *pc = &c;
-float *pf = &f;
-double *pd = &d;
+int main() {
+		int *numPtr;      // 포인터 변수 선언
+		int num1 = 10;    // int형 변수를 선언하고 10 저장
+		numPtr = &num1;   // num1의 메모리 주소를 포인터 변수에 저장
 
-// * : 포인터 수식어
-// & : 변수의 메모리 주소
+
+		char c = 'A';
+		char *pc = &c;    // 또는 선언과 동시에 할당도 가능
+
+		printf("%p\n", numPtr);    // 0055FC24: 포인터 변수 numPtr의 값 출력
+		printf("%p\n", &num1);     // 0055FC24: 변수 num1의 메모리 주소 출력
+
+    return 0;
+}
 ```
 
+- 수식어의 위치는 자유롭다.
+
 ```c
-// 실제 값 변경 X
+// 셋 다 같은 의미
+
+int* numPtr;     // 자료형 쪽에 *을 붙임
+int * numPtr;    // 자료형과 변수 가운데 *를 넣음
+int *numPtr;     // 변수 쪽에 *을 붙임
+```
+
+- 활용 - swap 함수
+
+```c
+// 실제 값 변경 X - Call by value
 void swap (int a, int b){
     int temp;
     if (a > b){
@@ -100,7 +121,7 @@ void swap (int a, int b){
     }
 }
 
-// 실제 값 변경 O
+// 실제 값 변경 O - Call by Reference
 void swap (int *a, int *b){
     int temp;
     if (*a > *b){
@@ -111,41 +132,17 @@ void swap (int *a, int *b){
 }
 ```
 
-<br />
+---
 
-### (부록) 정처기 실기
+## [참고] 캐시 지역성(Locality)
 
-```c
-#include <stdio.h>
+프로세스가 시/공간적으로 유사한 데이터를 집중적으로 참조하는 성질
 
-main()
-{
-	int a = 50;
-	int *b;
-	b = &a;
-	*b = *b + 20;
-	printf("%d, %d", a, *b);
-}
-
-// 결과 : 70, 70
-```
-
-```c
-#include <stdio.h>
-
-main()
-{
-	int a[5];
-	int *p;
-
-	for(i = 0; i < 5; i++)
-		a[i] = i+10;
-
-	p = a;
-
-	for(i = 0; i < 5; i++)
-		printf("%d ", *(p+i));
-}
-
-// 결과 : 10 11 12 13 14
-```
+- **시간적 지역성 (Temporal)**
+  - ex) Loop, SubRoutine, LRU
+- **공간적 지역성 (Spatial)**
+  - 메모리 상 인접 데이터의 재 이용률이 높음
+  - ex) 데이터베이스 파티션
+- **순차적 지역성 (Sequential)**
+  - 기억장치에 저장된 순서대로 이용될 가능성이 높음
+  - ex) 배열 데이터
