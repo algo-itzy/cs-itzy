@@ -235,7 +235,7 @@ depth(height)만큼 while문을 돎 => complete binary tree이므로 n개의 nod
 
 
 
-#### 시간복잡도 정리
+#### Priority Queue 구현 했을 때 시간복잡도 정리
 
 | Representation        | Insertion    | Deletion     |
 | --------------------- | ------------ | ------------ |
@@ -246,6 +246,13 @@ depth(height)만큼 while문을 돎 => complete binary tree이므로 n개의 nod
 | **max heap**          | **O(log2n)** | **O(log2n)** |
 | **min heap**          | **O(log2n)** | **O(log2n)** |
 
+
+#### 원래 시간 복잡도 (Worst Case)
+
+| Representation        | Insertion    | Deletion     | 탐색   |
+| --------------------- | ------------ | ------------ | ------ |
+| array                 | O(n)         | O(n)         | O(1)   |
+| linked list           | O(n)         | O(n)         | O(n)   |
 
 
 - 어떤 자료구조가 좋은가?
