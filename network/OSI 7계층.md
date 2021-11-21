@@ -57,8 +57,6 @@
 
 
 
-
-
 ## 3) 네트워크(Network)
 
 > 경로를 선택하고 주소를 정하고 경로에 따라 패킷을 전달
@@ -104,17 +102,15 @@ TCP와 UDP 프로토콜을 통해 통신을 활성화, 프로그램들이 전송
 - TCP : 신뢰성, 연결지향적
 - UDP : 비신뢰성, 비연결성, 실시간
 
-| 특징          | 설명                                    |
-| ------------- | --------------------------------------- |
-| PDU           | 세그먼트(Segment), 데이터그램(Datagram) |
-| 주요 프로토콜 | TCP, UDP                                |
-| 대표 장       | 게이트웨이, L4 스위치                   |
+| 특징          | 설명                  |
+| ------------- | --------------------- |
+| PDU           | 세그먼트(Segment)     |
+| 주요 프로토콜 | TCP, UDP              |
+| 대표 장       | 게이트웨이, L4 스위치 |
 
 #### Port 번호란?
 
 하나의 컴퓨터에서 동시에 실행되고 있는 프로세스들이 서로 겹치지 않게 설정되는 정수 값
-
-
 
 
 
@@ -193,18 +189,39 @@ TCP/IP의 상위 계층 프로토콜에서부터 하위 계층 프로토콜의 �
 
 #### 특징 정리
 
-|      | Layer        | PDU                         | 주요 프로토콜                              |
-| ---- | ------------ | --------------------------- | ------------------------------------------ |
-| 1    | Physical     | Bit                         | Modem, Cable, Fiber, RS-232C               |
-| 2    | Data Link    | Frame                       | 이더넷, MAC, PPP, ATM, LAN, Wifi(무선 LAN) |
-| 3    | Network      | Packet                      | IP, ICMP, ARP                              |
-| 4    | Transport    | Segment(TCP), Datagram(UDP) | TCP, UDP                                   |
-| 5    | Session      | Data                        | NetBIOS, SSH, TLS                          |
-| 6    | Presentation | Data                        | JPG, MPEG, SMB, AFP                        |
-| 7    | Application  | Data                        | DHCP, DNS, FTP, HTTP                       |
+|      | Layer        | PDU     | 주요 프로토콜                              |
+| ---- | ------------ | ------- | ------------------------------------------ |
+| 1    | Physical     | Bit     | Modem, Cable, Fiber, RS-232C               |
+| 2    | Data Link    | Frame   | 이더넷, MAC, PPP, ATM, LAN, Wifi(무선 LAN) |
+| 3    | Network      | Packet  | IP, ICMP, ARP                              |
+| 4    | Transport    | Segment | TCP, UDP                                   |
+| 5    | Session      | Data    | NetBIOS, SSH, TLS                          |
+| 6    | Presentation | Data    | JPG, MPEG, SMB, AFP                        |
+| 7    | Application  | Data    | DHCP, DNS, FTP, HTTP                       |
+
+1. 물리(Physical) : 0과 1로 이루어진 데이터를 **전기적 신호로 바꿔** 전송
+
+2. 데이터 링크(Data Link) : 송수신되는 정보의 **에러검출 / 재전송 / 흐름제어**
+
+3. 네트워크(Network) : **경로를 선택**하고 주소를 정하고 **경로에 따라** 패킷을 **전달**
+
+4. 전송(Transport) : 양 끝단의 사용자들이 **데이터를 주고 받게** 해주는 역할
+
+5. 세션(Session) : 통신장치 간의 **상호작용을 설정하고 유지**
+
+6. 표현(Presentation) : 코드 간의 **번역**을 담당(MIME 인코딩이나 암호화 등의 동작)
+
+7. 응용(Application) : **사용자**가 네트워크에 접근할 수 있도록 **서비스** 제공
 
 
 
 #### 헤더 정리
 
-추가중..
+|      | Layer       | Header에 있는 주요 내용                                      |
+| ---- | ----------- | ------------------------------------------------------------ |
+| 1    | Physical    | No header                                                    |
+| 2    | Data Link   | FCS(Frame Check Sequence), checksum, data 길이 등            |
+| 3    | Network     | IP protocol Version, 출발지/도착지 IP 주소, header checksum  |
+| 4    | Transport   | Source Port, Destination Port, ACK number, Data Offset(데이터 시작 위치 나타냄) |
+| 5    | Application | HTTP(일반 헤더, 요청/응답 헤더, Entity header)               |
+
