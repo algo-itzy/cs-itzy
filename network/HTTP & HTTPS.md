@@ -47,13 +47,9 @@ cf) 로그인과 같은 상태 유지는 쿠키, 서버 세션을 이용함 (상
 
 - Request message
 
-  ![](HTTP & HTTPS.assets/request message.jpg)![request message-2](HTTP & HTTPS.assets/request message-2.jpg)
-
   
 
 - Response message
-
-  ![response message](HTTP & HTTPS.assets/response message.jpg)
 
   - response status codes
 
