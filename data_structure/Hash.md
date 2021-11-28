@@ -56,7 +56,7 @@
 
     각각의 버킷을 linked list로 만들어 충돌이 발생하면 해당 버킷의 list에 추가하는 방식. 연결리스트를 사용하므로 삽입과 삭제가 간단하나 작은 데이터들을 저장할 때 연결리스트 자체의 오버헤드가 부담이 된다. Open Address 방식에 비해 테이블 확장을 늦출 수 있다.
 
-  - Tree ( [Red-Black Tree](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree)] )
+  - Tree ( [Red-Black Tree](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree) )
 
     linked list 대신 tree를 사용하며, 하나의 버킷에 할당된 데이터(key-value)쌍의 수가 많을 때 사용한다. 데이터가 적으면 Linked List가 맞음 (tree는 기본적으로 메모리 사용량이 크기 때문.)
 
