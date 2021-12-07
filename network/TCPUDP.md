@@ -1,5 +1,9 @@
 # TCP/UDP
 
+> TCP / UCP의 차이를 말해주세요
+>
+> 3 handshake, 4 handshake에 대해 설명해주세요
+
 * 군사적 목적 : 핵전쟁이 나도 정상동작하는 네트워크.
 * 회선교환(Sircuit Switching)은 중계소가 망가지면 통신이 끊김
 * 때문에 packet switching 방식이 대두됨. 회선 교환과 다르게 경로가 정해져 있지 않고 막히면 우회함.
