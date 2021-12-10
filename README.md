@@ -59,13 +59,12 @@
 
 ### 🧮 Data Structure
 
-- [Array](#)
-- [Linked List](#)
-- [Stack and Queue](#)
-- [Heap](#)
-- [Tree](#)
-- [Hash](#)
-- [Graph](#)
+- [Array](./data_structure/Array.md)
+- [Linked List](./data_structure/Linked_list.md)
+- [Stack](./data_structure/Stack.md)
+- [Heap](./data_structure/Heap.md)
+- [Hash](./data_structure/Hash.md)
+- [Tree](./data_structure/Tree.md)
 
 ### 💾 Database
 
