@@ -28,7 +28,7 @@
 
 해시 충돌은 해시함수가 서로 다른 두 개의 입력값에 대해 동일한 출력값을 내는 상황을 말한다. 따라서 서로 다른 Key값이 동일한 index로 매핑 될 경우, 해시 충돌이 발생하여 해시 테이블의 성능을 저하시킨다.
 
-![image-20211104163251612](Hash.assets/image-20211104163251612.png)
+![image](https://user-images.githubusercontent.com/43740455/145608187-bb22317d-a4be-451f-9cd9-f69f763cda0c.png)
 
 위 그림에서 John Smith와 Sandra Dee라는 키의 해시가 서로 충돌을 일으킨다.
 
@@ -66,7 +66,7 @@
 
     
 
-  ![img](https://camo.githubusercontent.com/59fb393a7832415fbefe5b53cc53f4524c69c85942309f09acc20f8a1799230e/68747470733a2f2f6d656469612e766c70742e75732f706f73742d696d616765732f637972616e6f636f64696e672f33323965376536302d623232362d313165392d613463652d3733306663366233373537612f31366542656171547469384d785750737734784267772e706e67)
+![image](https://user-images.githubusercontent.com/43740455/145608300-30c58fb0-6309-404e-a87e-1bdbbc80436d.png)
 
 - #### 개방 주소법 (open address )
 
@@ -247,11 +247,11 @@ def solution(game_board, table):
 
 #### dictobject entry의 struct
 
-![img](https://media.vlpt.us/images/jewelrykim/post/0a79ebd9-1672-43ba-90b6-6242a442cd08/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-04-30%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%207.32.29.png)
+![image](https://user-images.githubusercontent.com/43740455/145608395-7e4ce604-c265-4ffc-a9ed-08eb7bec7be4.png)
 
 #### setobject entry의 struct
 
-![img](https://media.vlpt.us/images/jewelrykim/post/b24342a3-1f79-4a2e-844e-67e148bd7ba5/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-04-30%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%207.32.52.png)
+![image](https://user-images.githubusercontent.com/43740455/145608422-bc6bfb1f-4151-4e94-8c31-10236418af04.png)
 언뜻 보면 비슷해 보이지만 큰 차이가 있다. dictentry에는 value를 가르키는 주소값이 추가로 저장되어 있고 setentry에는 value없이 key만 저장하고 있음을 알 수 있다. 실제로 c 코드를 보니 set에는 value가 없고 dict에는 key, value로 매핑되어 있는지 확실히 알 수 있다.
 
 <br>
@@ -263,7 +263,7 @@ hash table을 구현해보면 알겠지만 hash table을 순회하면 첫번째 
 
 #### setobject.c에서 pop method
 
-![img](https://media.vlpt.us/images/jewelrykim/post/3e1471d6-956a-413f-81f9-d9b3a9bf0ccb/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-04-30%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%207.46.43.png)
+![image](https://user-images.githubusercontent.com/43740455/145608452-bd06789d-552a-4e9e-85fd-b8f28e6a1cc9.png)
 간단히 말하면, while에서 존재하는 key가 나올 때까지 순회를 하고 나오면 해당 key를 return한다.
 
 <br>
