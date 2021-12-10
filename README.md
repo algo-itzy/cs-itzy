@@ -52,3 +52,52 @@
     </td>
   </tr>
 </table>
+
+<br />
+
+## 📋 TOC
+
+### 🧮 Data Structure
+
+- [Array](#)
+- [Linked List](#)
+- [Stack and Queue](#)
+- [Heap](#)
+- [Tree](#)
+- [Hash](#)
+- [Graph](#)
+
+### 💾 Database
+
+- [Index](#)
+- [Normalization](#)
+- [Transaction](#)
+- [Dead Lock](#)
+- [Statement](#)
+- [NoSQL](#)
+
+### 📡 Network
+
+- [OSI 7 Layer](#)
+- [TCP](#)
+- [UDP](#)
+- [HTTP & HTTPS](#)
+- [Blocking & Non-Blocking](#)
+- [Load Balancing](#)
+
+### 💻 Operating System
+
+- [Process & Thread](#)
+- [CPU Scheduling](#)
+- [Process Synchronization](#)
+- [Dead Lock](#)
+- [Memory Management](#)
+- [Virtual Memory](#)
+
+### 🛠 Software Engineering
+
+- [Object Oriented Programming (OOP)](#)
+- [Functional Programming](#)
+- [Test Driven Development (TDD)](#)
+- [Design Pattern](#)
+- [RESTful API](#)
