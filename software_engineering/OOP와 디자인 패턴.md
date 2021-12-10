@@ -84,11 +84,11 @@
 * 객체는 메시지를 통해 다른 객체에 책임을 다하라고 요구한다.
 * 메시지를 보내는 객체는 무엇을 할지만 요구하고, 어떻게 하는지는 신경쓰지 않아도 된다.
 * 객체는 책임을 수행하라고 요구받지만, 어떻게 처리할 지는 자율에 맡긴다.
-* 도움을 요청하는 것으 메시지 패싱. 베시지를 받았을때 실행되는 함수나 프로시저는 메서드.
+* 도움을 요청하는 것은 메시지 패싱. 베시지를 받았을때 실행되는 함수나 프로시저는 메서드.
 
 <br>
 
-![image-20211031035148715](OOP.assets/image-20211031035148715.png)
+![image](https://user-images.githubusercontent.com/43740455/145612702-a00e2c83-054c-4c4f-a3eb-052f9952cee0.png)
 
 <br>
 
@@ -111,7 +111,7 @@
 
 <br>
 
-![image-20211031035533564](OOP.assets/image-20211031035533564.png)
+![image](https://user-images.githubusercontent.com/43740455/145612730-d32235ef-1c87-4dce-920b-1d9a853bc474.png)
 
 <br>
 
@@ -131,11 +131,11 @@
 
 * 주의할 점 : 현실 중심의 데이터 중심 설계를 하기 쉬움(요리사, 전화기, 배달 도착지, 돈...)
 
-![image-20211031035859586](OOP.assets/image-20211031035859586.png)
+![image](https://user-images.githubusercontent.com/43740455/145612745-38136982-69c4-4e7d-953c-4e7fabca4991.png)
 
 * 데이터 중심 설계. getter, setter가 과도하게 추가되어 결합도가 높아진다. (서로 알고있는 객체가 너무 많아진다.)
 
-![image-20211031035958068](OOP.assets/image-20211031035958068.png)
+![image](https://user-images.githubusercontent.com/43740455/145612765-2840200a-abd1-41e9-89b1-02ca1574eff3.png)
 
 * 하나의 변경이 일어났을 때 수정해야 할 것이 너무 많아짐. ( 유지보수성 하락 )
 
@@ -174,7 +174,7 @@
 
 #### 캡슐화, 은닉성
 
-![image-20211031041308798](OOP.assets/image-20211031041308798.png)
+![image](https://user-images.githubusercontent.com/43740455/145612784-c519cddc-1e1c-4328-a952-2f34840be750.png)
 
 * 외부에서 명령할 것들만 public, 내부구조는 private로 감춰놓음
 * 은닉성으로 우리는 남이 만든 class라도 일일히 뜯어볼 필요 없이 기능만 가져다 쓸 수 있음.
@@ -185,15 +185,15 @@
 
 #### Interface ( = 겉으로 드러난 행동에 대해 정의)
 
-![image-20211031041516091](OOP.assets/image-20211031041516091.png)
+![image](https://user-images.githubusercontent.com/43740455/145612815-9b929ca6-0e83-4c0b-a012-5219e5397584.png)
 
 <br>
 
-![image-20211031041558885](OOP.assets/image-20211031041558885.png)
+![image](https://user-images.githubusercontent.com/43740455/145612878-6a3cb7d1-7f65-4092-8419-1af1aa71cae7.png)
 
 * 청소라는 동일한 메서드로 일을 시킬 수 있게 override함.
 
-![image-20211031041646608](OOP.assets/image-20211031041646608.png)
+![image](https://user-images.githubusercontent.com/43740455/145612893-c789d48f-d774-4125-8479-c46a4925a52a.png)
 
 * 인터페이스로 묶여야 가능함.
 
@@ -201,15 +201,15 @@
 
 <br>
 
-![image-20211031041745401](OOP.assets/image-20211031041745401.png)
+![image](https://user-images.githubusercontent.com/43740455/145612909-ca071a83-6bc5-47fd-8608-bdb538500dbf.png)
 
-![image-20211031041809027](OOP.assets/image-20211031041809027.png)
+![image](https://user-images.githubusercontent.com/43740455/145612920-f7936d22-83ca-4282-aaec-0bcbe9134180.png)
 
 * 학생단위 -> 교실단위로 묶음
 
-![image-20211031041852337](OOP.assets/image-20211031041852337.png)
+![image](https://user-images.githubusercontent.com/43740455/145612931-2354ada0-92f6-4c33-8587-3ef1603743f7.png)
 
-![image-20211031041901876](OOP.assets/image-20211031041901876.png)
+![image](https://user-images.githubusercontent.com/43740455/145612941-9c1e6a05-b4a9-48a0-838a-46c71e2e4aed.png)
 
 * 상속받은 자식클래스.
 
@@ -226,7 +226,7 @@
 * 겉으로 드러난게 같으면 같은 타입 ( 공용 인터페이스가 같으면 같은 타입)
 * 서로 대체 가능성이 있다 = 다형성. (OOP의 특징)
 
-![image-20211031041937495](OOP.assets/image-20211031041937495.png)
+![image](https://user-images.githubusercontent.com/43740455/145612950-9bd63171-831a-4dc6-961f-f7bba0cacfd4.png)
 
 * 추상클래스로는 객체를 만들 수 없음. (특정 객체를 부르기엔 너무 추상적임)
 * 그냥 자식클래스의 공통점을 가져오기 위한 추상 클래스 ( 부모 클래스 )
@@ -402,7 +402,7 @@ Ex. Adapter
 
 * 프로세스 내에서 객체가 하나만 만들어져야 할 때 
 
-![image-20211101014131483](OOP.assets/image-20211101014131483.png)
+![image](https://user-images.githubusercontent.com/43740455/145612983-4794ef6b-b440-40f2-a086-f9bbaad2d9a6.png)
 
 * 정적공간 static Settings : call by reference 시키기 위함.
 * 하지만 이경우 멀티쓰레드 등에서 오류 생길 수 있음. 검색해서 안전한 방법 찾아보기.
@@ -415,7 +415,7 @@ Ex. Adapter
 
 * 모드가 바뀔때마다 전략이 수정되는 방식.
 
-![image-20211101014627604](OOP.assets/image-20211101014627604.png)
+![image](https://user-images.githubusercontent.com/43740455/145613001-8729f8dc-c4d6-4b20-a740-10d73d71b3ba.png)
 
 * interface의 search를 각 전략들이 필수적으로 선언 해야함.
 * 옵션들마다 행동을 모듈화해서 독립적이고 `상호교체`가능하게 만드는 것이 전략패턴
@@ -430,7 +430,7 @@ Ex. Adapter
 * 특정 상태마다 다르게 할 일을 그 상태에서 할 일과 함께 하나하나 모듈화해서 지정,
 * 메서드가 실행될 때 그 모드(state)도 전환시킴
 
-![image-20211101015248254](OOP.assets/image-20211101015248254.png)
+![image](https://user-images.githubusercontent.com/43740455/145613020-4037cd5a-faf5-47e8-a741-eff0ee874244.png)
 
 * 밝은 모드, 다크 모드 클래스 Switching
 
@@ -442,15 +442,15 @@ Ex. Adapter
 
 * 하는 일 자체가 다른 것.
 
-![image-20211101015458437](OOP.assets/image-20211101015458437.png)
+![image](https://user-images.githubusercontent.com/43740455/145613036-e9495ec2-2044-42ae-b5d9-7c3ba37faad4.png)
 
 * 로봇이 할 일을 정의. abstract는 스스로 객체 생성 불가하지만 자식들이 객체를 생성해 활동함.
 
 <br>
 
-### <br>Adapter Pattern
+### Adapter Pattern
 
-![image-20211101023039445](OOP.assets/image-20211101023039445.png)
+![image](https://user-images.githubusercontent.com/43740455/145613063-a170fc63-17cc-4f5b-bb34-fcc03502ab1c.png)
 
 <br>
 
@@ -458,9 +458,9 @@ Ex. Adapter
 
 ### Proxy Pattern
 
-![image-20211101023258292](OOP.assets/image-20211101023258292.png)
+![image](https://user-images.githubusercontent.com/43740455/145613090-5326be97-5508-482d-8e99-a100226afe6e.png)
 
-![image-20211101023312584](OOP.assets/image-20211101023312584.png)
+![image](https://user-images.githubusercontent.com/43740455/145613097-e96cdbde-6018-42d5-87dd-e240586aae31.png)
 
 <br>
 
@@ -468,7 +468,7 @@ Ex. Adapter
 
 ### Facade Pattern
 
-![image-20211101023646803](OOP.assets/image-20211101023646803.png)
+![image](https://user-images.githubusercontent.com/43740455/145613108-0487860e-a567-4a10-8e00-f9e4f60810f8.png)
 
 * facade는 외벽으로 감춰놓는 것.
 
@@ -478,7 +478,7 @@ Ex. Adapter
 
 ### Template-method Pattern
 
-![image-20211101050058365](OOP.assets/image-20211101050058365.png)
+![image](https://user-images.githubusercontent.com/43740455/145613117-2d164701-7117-4555-ae54-09b697232db4.png)
 
 * 어떤 일들을 수행하는데 그 일들 간 공통된 절차가 있을 때(부모 클래스의 행위 중 교환 가능한 자식 클래스를 도중 호출)
 
@@ -491,7 +491,7 @@ Ex. Adapter
 * 특정 클래스의 객체들이 할 수 있는 일을 여러가지 두고 각 객체마다 사용자가 원하는 대로 골라시키거나 기능들을 필요에 따라 장착
 * 전투기가 아이템을 먹거나 레벨업 할때마다 미사일이 추가됨.
 
-![image-20211101050744837](OOP.assets/image-20211101050744837.png)
+![image](https://user-images.githubusercontent.com/43740455/145613130-c68c25eb-cd5d-412f-bfce-67745a19d490.png)
 
 * 객체가 생성자 변수로 다른 객체 안으로 들어감으로써 그 실행하는 메소드의 행동이 추가되도록 하는 것.
 
@@ -501,12 +501,12 @@ Ex. Adapter
 
 ### Factory-method Pattern
 
-![image-20211101051035141](OOP.assets/image-20211101051035141.png)
+![image](https://user-images.githubusercontent.com/43740455/145613155-61c01f50-7f40-485f-adc1-e3099934d25a.png)
 
 * Factory class로 모아둚으로써 응집도를 높히고 결합도를 낮춤.
 * 개발자측은 다 알필요 없고 사용할 조건들만 넘겨주면 프레임워크가 다 만들어서 넘겨주는 것처럼 구현되어잇음.
 
-![image-20211101051248754](OOP.assets/image-20211101051248754.png)
+![image](https://user-images.githubusercontent.com/43740455/145613168-a4758a38-8743-4d2b-8a9a-f9df538be7b0.png)
 
 * Decorator의 전투기들을 Factory로 생성.
 
@@ -520,7 +520,7 @@ Ex. Adapter
 * 팩토리를 여러 종류(테마)로 건설.
 * 기본 팩토리를 추상팩토리로 놔두고 상속해서 팩토리들을 생성. 찍혀나올 부품들이 달라지도록 함.
 
-![image-20211101051447113](OOP.assets/image-20211101051447113.png)
+![image](https://user-images.githubusercontent.com/43740455/145613181-1c1dcb11-f063-46a6-aa6a-48204f9fffeb.png)
 
 <br>
 
@@ -531,11 +531,11 @@ Ex. Adapter
 * 중재자 패턴.
 * 특정 이벤트가 발생할 때마다 연결된 다른 클래스에 상태 변화를 알려주는 클래스.
 
-![image-20211101051549263](OOP.assets/image-20211101051549263.png)
+![image](https://user-images.githubusercontent.com/43740455/145613193-58ad7f77-4164-41f1-8adb-8d316d197c6a.png)
 
 * onModeChange를 따로 맡을 클래스를 만들어둠
 
-![image-20211101051718161](OOP.assets/image-20211101051718161.png)
+![image](https://user-images.githubusercontent.com/43740455/145613216-a920f5f5-ad59-4346-9cca-a48e2a30bc7d.png)
 
 * Onchange를 각각 애들에게 장착시키고
 * 변화가 생기면 중재자에게 연락을 하게 함. 중재자를 중심으로 N : N
@@ -547,7 +547,7 @@ Ex. Adapter
 
 ### Composite Pattern
 
-![image-20211101051850774](OOP.assets/image-20211101051850774.png)
+![image](https://user-images.githubusercontent.com/43740455/145613234-120ad164-adbe-4822-9018-02c8c2baf9e8.png)
 
 * 폴더나 파일 관계 간 포함관계에 있는 것들이 같은 방식으로 다뤄지도록 할 떄.
 * 검색, 용량 누적합, 연속 삭제 등
