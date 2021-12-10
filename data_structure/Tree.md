@@ -1,12 +1,8 @@
-[TOC]
-
-
-
 ## Tree
 
-![img](https://media.vlpt.us/images/jing07161/post/8ded3e1f-0706-4523-a817-289061329fb1/image.png)
+![image](https://user-images.githubusercontent.com/43740455/145623641-d5c1a24e-e568-4d97-8285-ad486db2ae98.png)
 
-- 트리는 그래프의 한 종류로, '최소 연결 트리'라고도 불린다.
+- 트리는 그래프의 한 종류로, '최소 연결 트리'라고도 부름
 - 비선형구조는 선형구조(데이터들을 순차적으로 나열시킨 형태)와 다르게 데이터가 계층적으로 구성
 - linked list의 단점인 검색 시 노드의 처음부터 찾아가야 하는 점을 보완하여 검색을 중간부터 시작하여 좌우 중 하나로 분기, 1/2씩 검색 대상을 줄여나가 이진검색의 효과
 
@@ -27,7 +23,7 @@ class Tree {
   }
 
 	// 트리 안에 해당 값이 포함되어 있는지 확인하는 메서드를 만듭니다.
-  contains(value) { 
+  contains(value) {
      if(this.value === value){
        return true;
      }
@@ -43,17 +39,13 @@ class Tree {
 }
 ```
 
-
-
 ### 종류
 
 #### 이진 트리 (Binary Tree)
 
 - 각 노드가 최대 두 개의 자식을 갖는 트리
 
-  ![img](https://images.velog.io/images/nameunzz/post/22e0080e-61fd-4bc1-bab9-ec212c98ecdb/image.png)
-
-  
+  ![image](https://user-images.githubusercontent.com/43740455/145623812-dc5c23de-bfb0-43a4-9ed0-7703f6f1927d.png)
 
 ##### 정 이진 트리 (Full Binary Tree)
 
@@ -61,9 +53,7 @@ class Tree {
 
 - 모든 노드가 0개 또는 2개의 자식 노드를 갖는 트리
 
-  ![img](https://media.vlpt.us/images/nameunzz/post/0316e881-2131-4203-a60c-1d26d19be6a6/image.png)
-
-
+  ![image](https://user-images.githubusercontent.com/43740455/145623862-26a03513-bbd2-4c1b-8d7a-7ce7c15e77c7.png)
 
 ##### 완전 이진 트리 (Complete Binary Tree)
 
@@ -73,9 +63,7 @@ class Tree {
 
 - 노드가 왼쪽에서 오른쪽으로 채워져야 한다.
 
-  ![img](https://media.vlpt.us/images/nameunzz/post/9f84493b-7b9b-4f88-9a70-bd3d1386ec16/image.png)
-
-
+  ![image](https://user-images.githubusercontent.com/43740455/145623977-843db35d-852e-4e40-9cff-0292c115c8f1.png)
 
 ##### 포화 이진 트리 (Perfect BInary Tree)
 
@@ -83,13 +71,11 @@ class Tree {
 
 - 모든 말단 노드는 같은 높이에 있어야 한다.
 
-  ![img](https://media.vlpt.us/images/nameunzz/post/f93e1f03-e4f6-4054-b0c6-c64faf74e5bf/image.png)
-
-
+  ![image](https://user-images.githubusercontent.com/43740455/145624019-71e2ca2b-a838-4a52-95f0-a76ea757fea6.png)
 
 #### 이진 검색 트리 (Binary Search Tree)
 
-![img](https://media.vlpt.us/images/2cong/post/ceb75454-d595-4be5-b0f9-ceaaaac451f8/image.png)
+![image](https://user-images.githubusercontent.com/43740455/145624047-c99c503c-2a4c-4f4e-9b94-637618b7e27d.png)
 
 - 기준이 되는 노드의 왼쪽 자식 노드는 기준 노드보다 크기가 작아야하고, 기준 노드의 오른쪽 자식 노드는 기준 노드보다 커야한다.
 - 각 노드의 값은 중복되지 않는다.
@@ -110,13 +96,13 @@ class BinarySearchTree {
   insert(value) {
 		// 입력값을 기준으로, 현재 노드의 값보다 크거나 작은 것에 대한 조건문이 있어야 합니다.
 		// 보다 작다면, Node의 왼쪽이 비어 있는지 확인 후 값을 넣습니다.
-    
+
     if (value < this.value) {
       if (this.left === null) {
         this.left = new BinarySearchTree(value);
       } else {.
         this.left.insert(value);
-      }    
+      }
 		// 보다 크다면, Node의 오른쪽이 비어 있는지 확인 후 값을 넣습니다.
     } else if (value > this.value) {
       if (this.right === null) {
@@ -141,10 +127,10 @@ class BinarySearchTree {
         return true;
        }else{
          return false;
-       } 
+       }
     }
 		// 입력값을 기준으로 현재 노드의 값보다 큰지 판별하는 조건문이 있어야 합니다.
-    if (value > this.value) {                                			     
+    if (value > this.value) {
      if(this.right !== null && this.right.contains(value)){
         return true;
        }else{
@@ -191,4 +177,3 @@ class BinarySearchTree {
 
 }
 ```
-
