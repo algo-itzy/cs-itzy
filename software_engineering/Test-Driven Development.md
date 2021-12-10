@@ -23,7 +23,7 @@ Kent Beck이라는 분이 Extreme Programming을 발표하며 2003년에 제안
 
 ### TDD 싸이클
 
-![cycle](TDD.assets/TDD_cycle.PNG)
+![image](https://user-images.githubusercontent.com/43740455/145613467-7c2454f5-36ec-41fd-88cd-bfe8959bddb4.png)
 
 ### 도대체 어떻게 하는건데? 
 * Test code를 작성하고, Testable한 Product Code를 적용해 기능 단위로 독립적으로 테스트한다.
@@ -263,7 +263,7 @@ def solution(m, n, board):
 
 * TDD는 엄밀히 말하면 일을 두번하는 것. 
 * Product 코드와 Test 코드 작성이라는 두가지 Task를 하는 것임
-![cost](TDD.assets/cost.png)
+![image](https://user-images.githubusercontent.com/43740455/145613507-ba73fa6e-08ec-486b-a048-f16e93cc1c15.png)
 TDD는 초기에 비용이 많이 들지만, 프로젝트의 규모가 커질 수록 시간 비용이 로그 함수의 형태를 띄게 됨
 프로덕트의 크기에 걸맞는 시간 비용 곡선을 고려하면서 TDD를 적용하는 것이 바람직하다.
 
