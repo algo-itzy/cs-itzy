@@ -24,21 +24,21 @@ CPU가 하나의 작업(프로세스)가 끝나면 다음 작업을 수행해야
 * 모든 프로세스에 균등한 CPU점유시간을 보장하며, 시분할 시스템을 사용한다
   * 시분할 시스템 : CPU 스케줄링과 다중 프로그래밍을 이용해서 각 사용자들에게 컴퓨터 자원을 시간적으로 분할하여 사용할 수 있게 해주는 대화식 시스템
 
-![image-20210917170046578](img/image-20210917170046578.png)
+![image](https://user-images.githubusercontent.com/43740455/145611341-3958b77a-ea4e-4b78-9e79-da0528d0f5a5.png)
 
 ##### SRT(Shortest Remaining Time First)
 
 * 실행시간이 짧은 순서대로 프로세스를 수행하는 방식
 * 현재 실행중인 프로세스의 남은 실행시간보다 실행시간이 짧은 프로세스가 큐에 들어오면 더 짧은 프로세스가 CPU를 선점한다.
 
-![image-20210917170354297](img/image-20210917170354297.png)
+![image](https://user-images.githubusercontent.com/43740455/145611358-eca6448c-d143-4022-9cee-20357c645fdd.png)
 
 ##### 다단계 큐(Multi Level Queue)
 
 * 프로세스들을 그룹으로 나누어 각 그룹마다 Ready Queue를 여러개 두며, 각 큐마다 다른 규칙을 지정이 가능하다.
 * 여러개의 큐를 이용해서 상위단계 작업이 선점되는 방식
 
-![image-20210917170639978](img/image-20210917170639978.png)
+![image](https://user-images.githubusercontent.com/43740455/145611370-70f3d9cb-f3c2-4f6e-b00a-91aace02f31d.png)
 
 ##### 다단계 피드백 큐(Multi Level Feedback Queue)
 
@@ -48,7 +48,7 @@ CPU가 하나의 작업(프로세스)가 끝나면 다음 작업을 수행해야
 * 큐에서 프로세스가 실행되는 순서는 각 큐마다 FCFS방식으로 먼저 들어온 순서대로 실행
 * 유연성이 뛰어나고 turnaround시간과 response time에 최적화된 알고리즘
 
-![image-20210917172038539](img/image-20210917172038539.png)
+![image](https://user-images.githubusercontent.com/43740455/145611466-d66df69b-688f-474e-9b1d-6f7576939071.png)
 
 
 
