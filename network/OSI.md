@@ -6,9 +6,7 @@
 
 OSI는 **Open Systems Interconnection**의 약자로 개방형 시스템이라는 뜻이다. OSI 7계층은 네트워크에서 통신이 일어나는 과정을 7단계로 나눈 것이다.
 
-![](https://raw.githubusercontent.com/algo-itzy/cs-itzy/3678ae3064f4a6999e6165269521ec70986aea98/network/OSI.assets/Group%201.svg)
-
-
+![image](https://user-images.githubusercontent.com/43740455/145609694-00ea2fe9-310c-40c0-89e2-e0f1f17321db.png)
 
 <br/>
 
