@@ -2,7 +2,7 @@
 
 > 프로세스, 스레드가 결코 일어날 수 없는 특정 이벤트를 기다리는 상태
 
-![image-20211017234113129](deadlock.assets/image-20211017234113129.png)
+![image](https://user-images.githubusercontent.com/43740455/145609060-05b6b1e5-8ba0-48fb-8142-dd33c06aa1e0.png)
 
 
 
@@ -22,7 +22,7 @@
 
 ### 해결책
 
-![image-20211017234137793](deadlock.assets/image-20211017234137793.png)
+![image](https://user-images.githubusercontent.com/43740455/145609085-697d264b-dc63-4f0d-9f5b-d72ada38616a.png)
 
 #### 1. 예방
 
@@ -45,7 +45,7 @@
 
 - 자원 할당 알고리즘
 
-  ![image-20211017234426424](deadlock.assets/image-20211017234426424.png)
+  ![image](https://user-images.githubusercontent.com/43740455/145609106-59d64d63-88d3-4268-8dd7-c38cd1aa89f8.png)
 
   - 종류별로 자원 1개 -> 한 개씩 요청 가능
   - 자원 요청 시 예약 선 : 요청 간선으로 전환
@@ -69,7 +69,7 @@
 
   - 교착상태 발견 알고리즘, 자원 할당 그래프 사용
 
-    ![image-20211017234638720](deadlock.assets/image-20211017234638720.png)
+    ![image](https://user-images.githubusercontent.com/43740455/145609127-0157bb39-6936-4c3b-be22-754002f5575f.png)
 
 - 복구
 
